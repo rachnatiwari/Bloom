@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavBar from "./navbar";
+import TrendingToday from "./trending/trendingToday";
+import Posts from "./posts";
+import SideBar from "./sidebar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <div className="app-body">
+        <TrendingToday />
+        <span style={{'fontSize':'0.9rem', 'fontWeight':'500'}}>Popular Posts </span>
+        <div className="content">
+          <Posts />
+          <SideBar />
+        </div>
+      </div>
     </div>
   );
 }

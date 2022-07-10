@@ -1,0 +1,26 @@
+.trending-navbar {
+  margin-bottom: 3%;
+}
+
+.trending-content {
+  display: flex;
+  max-height: 5% !important;
+}
+
+.trending-post {
+  width: 23.5%;
+  margin: 0 1%;
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 10rem;
+  background-image: linear-gradient(to top, black, rgba(0,0,0,0)),url('../images/rec.png');
+  background-size: cover;
+  border-radius: 7%;
+}
+
+.post-name {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
