@@ -1,21 +1,15 @@
 import "./App.css";
-import NavBar from "./navbar";
-import TrendingToday from "./trending/trendingToday";
-import Posts from "./posts";
-import SideBar from "./sidebar";
+import Home from "./home";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <div className="app-body">
-        <TrendingToday />
-        <span style={{'fontSize':'0.9rem', 'fontWeight':'500'}}>Popular Posts </span>
-        <div className="content">
-          <Posts />
-          <SideBar />
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="about" element={<About />} /> */}
+      </Routes>
+      <Home />
     </div>
   );
 }

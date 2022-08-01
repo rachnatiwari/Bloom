@@ -13,14 +13,29 @@
   position: relative;
   text-align: center;
   color: white;
-  height: 10rem;
-  background-image: linear-gradient(to top, black, rgba(0,0,0,0)),url('../images/rec.png');
+  height: 11rem;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.464), rgba(0,0,0,0)),url(../images/trending.png);
   background-size: cover;
   border-radius: 7%;
 }
 
 .post-name {
   position: absolute;
+  bottom: 35px;
+  left: 2px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0 2%;
+}
+
+.subreddit-name {
+  position: absolute;
   bottom: 8px;
-  left: 16px;
+  left: 8px;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: white;
+  padding-left: 5%;
 }

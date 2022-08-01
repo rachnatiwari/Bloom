@@ -14,7 +14,8 @@ function Premium() {
           <div>The best Reddit experience, with monthly Coins</div>
         </div>
       </div>
-      <button style={{ backgroundColor: "rgb(255,69,0)" }} className='sidebar-button'>Try Now</button>
+      <a href="https://www.reddit.com/premium">
+      <button style={{ backgroundColor: "rgb(255,69,0)" }} className='sidebar-button'>Try Now</button></a>
     </div>
   );
 }
