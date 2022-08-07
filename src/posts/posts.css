@@ -204,3 +204,91 @@
 .award-link:hover {
   text-decoration: underline;
 }
+
+.subreddit_tooltip {
+  padding: 2%;
+  font-size: 1.05rem;
+}
+
+.subreddit_tooltip_navbar {
+  display: flex;
+}
+
+.subreddit_tooltip_name {
+  font-weight: 500;
+  margin-top: 2.5%;
+}
+
+.subreddit_tooltip_users {
+  display: flex;
+  font-size: 0.9rem;
+  padding: 5% 0;
+  color: gray;
+}
+
+.subreddit_tooltip_members {
+  width: 50%;
+}
+
+.subreddit_tooltip_online {
+  width: 50%;
+}
+
+.subreddit_tooltip_button {
+  width: 100%;
+  margin-top: 3%;
+  border: none;
+  background-color: rgb(48, 122, 204);
+  color: white;
+  font-size: 1.05rem;
+  padding: 2% 0;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.subreddit_tooltip_button:hover {
+  opacity: 0.9;
+}
+
+.snootar_image {
+  max-width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.snoovatar_username {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.snoovatar_user_details {
+  text-align: center;
+  color: gray;
+  padding: 2% 0;
+}
+
+.snoovatar_karma {
+  display: flex;
+  color: grey;
+}
+
+.snoovatar_karma .left {
+  width: 50%;
+}
+
+.snoovatar_karma .right {
+  width: 50%;
+}
+
+.create_avatar_button {
+  width: 100%;
+  margin: 3% 0;
+  padding: 3% 0;
+  background: linear-gradient(to right, red, orange);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}

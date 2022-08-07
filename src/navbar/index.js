@@ -7,14 +7,12 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <div className="navbar">
-      {/* <Link to='/'> */}
       <div className="bloom-icon">
       <Link to="/"><img src={require("../images/icon.png")} alt="bloom" /></Link>
       </div>
       <div className="bloom">
       <Link to="/"><img src={require("../images/name.png")} alt="bloom" /></Link>
       </div>
-      {/* </Link> */}
 
       <SearchBar />
         <button className='login'>Log In</button>
