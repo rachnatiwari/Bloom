@@ -1,4 +1,4 @@
-import "../posts.css";
+import "./comment-card.css";
 import moment from "moment";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
@@ -128,7 +128,6 @@ function CardNav(props) {
               raw_data.awarder_karma),
           created_at: raw_data.created_utc,
         };
-        console.log(user_info);
         setUser(user_info);
       });
   }
@@ -140,7 +139,7 @@ function CardNav(props) {
           src={
             subreddit.icon
               ? subreddit.icon
-              : require("../../images/subreddit_icon.png")
+              : require("../images/subreddit_icon.png")
           }
           alt="subreddit Icon"
           style={{ maxWidth: "90%", maxHeight: "90%", borderRadius: "50%" }}
@@ -156,7 +155,7 @@ function CardNav(props) {
                     src={
                       subreddit.icon
                         ? subreddit.icon
-                        : require("../../images/subreddit_icon.png")
+                        : require("../images/subreddit_icon.png")
                     }
                     alt="subreddit Icon"
                     style={{
@@ -222,188 +221,6 @@ function CardNav(props) {
         <span style={{ color: "gray" }}>
           {" "}
           · Posted by{" "}
-          {/* {user.snoovatar_img ? (
-            <SnoovatarTooltip
-              title={
-                <div style={{ padding: "3%" }}>
-                  <img
-                    src={user.snoovatar_img}
-                    alt={"u/" + user.name}
-                    className="snootar_image"
-                  />
-                  <div className="snoovatar_username">{user.name}</div>
-                  <div className="snoovatar_user_details">
-                    u/{user.name} - {moment.unix(user.created_at).fromNow()}
-                  </div>
-                  <button className="create_avatar_button">
-                    Create your own avatar {">"}
-                  </button>
-                  <div className="snoovatar_karma">
-                    <div className="left">
-                      <div
-                        style={{
-                          fontSize: "1.01rem",
-                          color: "black",
-                          fontWeight: "600",
-                        }}
-                      >
-                        {user.post_karma > 1000
-                          ? (user.post_karma / 1000).toFixed(1) + "k"
-                          : user.post_karma}
-                      </div>
-                      <div>Post Karma</div>
-                      <div
-                        style={{
-                          fontSize: "1.01rem",
-                          marginTop: "5%",
-                          color: "black",
-                          fontWeight: "600",
-                        }}
-                      >
-                        {user.awardee_karma > 1000
-                          ? (user.awardee_karma / 1000).toFixed(1) + "k"
-                          : user.awardee_karma}
-                      </div>
-                      <div>
-                        Awardee Karma{" "}
-                        <a href="https://www.reddithelp.com/en/categories/reddit-101/reddit-basics/what-karma">
-                          <InfoOutlinedIcon fontSize="small" color='grey' />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="right">
-                      <div
-                        style={{
-                          fontSize: "1.01rem",
-                          color: "black",
-                          fontWeight: "600",
-                        }}
-                      >
-                        {user.comment_karma > 1000
-                          ? (user.comment_karma / 1000).toFixed(1) + "k"
-                          : user.comment_karma}
-                      </div>
-                      <div>Comment Karma</div>
-                      <div
-                        style={{
-                          fontSize: "1.01rem",
-                          marginTop: "5%",
-                          color: "black",
-                          fontWeight: "600",
-                        }}
-                      >
-                        {user.awarder_karma > 1000
-                          ? (user.awarder_karma / 1000).toFixed(1) + "k"
-                          : user.awarder_karma}
-                      </div>
-                      <div>
-                        Awarder Karma
-                        <a href="https://www.reddithelp.com/en/categories/reddit-101/reddit-basics/what-karma">
-                          <InfoOutlinedIcon fontSize="small" color='grey' />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <button className="subreddit_tooltip_button">Follow</button>
-                </div>
-              }
-            >
-              <a
-                href={"/user/" + props.author}
-                className="post-author-name underline-link"
-              >
-                u/{props.author}
-              </a>
-            </SnoovatarTooltip>
-          ) : (<UserTooltip
-            title={
-              <div style={{ padding: "3%" }}>
-                <img
-                  src={user.icon_img}
-                  alt={"u/" + user.name}
-                  className="snootar_image"
-                />
-                <div className="snoovatar_username">{user.name}</div>
-                <div className="snoovatar_user_details">
-                  u/{user.name} - {moment.unix(user.created_at).fromNow()}
-                </div>
-                <div className="snoovatar_karma">
-                  <div className="left">
-                    <div
-                      style={{
-                        fontSize: "1.01rem",
-                        color: "black",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {user.post_karma > 1000
-                        ? (user.post_karma / 1000).toFixed(1) + "k"
-                        : user.post_karma}
-                    </div>
-                    <div>Post Karma</div>
-                    <div
-                      style={{
-                        fontSize: "1.01rem",
-                        marginTop: "5%",
-                        color: "black",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {user.awardee_karma > 1000
-                        ? (user.awardee_karma / 1000).toFixed(1) + "k"
-                        : user.awardee_karma}
-                    </div>
-                    <div>
-                      Awardee Karma{" "}
-                      <a href="https://www.reddithelp.com/en/categories/reddit-101/reddit-basics/what-karma">
-                        <InfoOutlinedIcon fontSize="small" color='grey' />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="right">
-                    <div
-                      style={{
-                        fontSize: "1.01rem",
-                        color: "black",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {user.comment_karma > 1000
-                        ? (user.comment_karma / 1000).toFixed(1) + "k"
-                        : user.comment_karma}
-                    </div>
-                    <div>Comment Karma</div>
-                    <div
-                      style={{
-                        fontSize: "1.01rem",
-                        marginTop: "5%",
-                        color: "black",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {user.awarder_karma > 1000
-                        ? (user.awarder_karma / 1000).toFixed(1) + "k"
-                        : user.awarder_karma}
-                    </div>
-                    <div>
-                      Awarder Karma
-                      <a href="https://www.reddithelp.com/en/categories/reddit-101/reddit-basics/what-karma">
-                        <InfoOutlinedIcon fontSize="small" color='grey' />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <button className="subreddit_tooltip_button">Follow</button>
-              </div>
-            }
-          >
-            <a
-                href={"/user/" + props.author}
-                className="post-author-name underline-link"
-              >
-                u/{props.author}
-              </a>
-          </UserTooltip>)} */}
           <UserTooltip
             title={
               <div style={{ padding: "3%" }}>
@@ -416,7 +233,7 @@ function CardNav(props) {
                   {user.name}
                   {!user.snoovatar_img && (
                     <img
-                      src={require("../../images/premium.png")}
+                      src={require("../images/premium.png")}
                       alt="premium user"
                       style={{ maxWidth: "10%" }}
                     />

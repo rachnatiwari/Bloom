@@ -1,7 +1,7 @@
-import "../posts.css";
+import "./card.css";
 import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded";
 import ArrowDownwardRoundedIcon from "@mui/icons-material/ArrowDownwardRounded";
-import Footer from "../footer";
+import Footer from "./footer";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CardNav from "./navbar";
 
@@ -68,7 +68,8 @@ function Card(props) {
           )}
         </div>
         </a>
-        <Footer saved={props.saved} />
+        {console.log(props.comments)}
+        <Footer saved={props.saved} comments={props.comments} />
       </div>
     </div>
   );

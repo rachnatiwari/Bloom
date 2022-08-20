@@ -1,0 +1,76 @@
+.comment-card {
+  margin: 2% 0;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px lightgray solid;
+  font-size: 0.8rem;
+  color: gray;
+  font-weight: 400;
+}
+
+.comment_card_username{
+  color: rgb(48,122,204);
+  font-weight: 400;
+}
+
+.comment-card a:hover{
+  text-decoration: underline;
+}
+
+.post_commented_on{
+  color: black;
+}
+
+.post_commented_on:hover{
+  text-decoration: none !important;
+}
+
+.comment_card_subreddit{
+  color: black;
+  font-weight: bold;
+}
+
+.comment-card-component:hover{
+  border: 0.5px black solid;
+  border-radius: 2px;
+}
+
+.comment-card-component{
+  padding: 1%;
+}
+
+.comment_card_body{
+  background-color: rgba(38, 117, 227, 0.096);
+  margin: 0.5%;
+  margin-left: 5%;
+  padding: 1%;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+}
+
+.comment_card_nav{
+  display: flex;
+  line-height: 1.1rem;
+  border-bottom: 1px lightgray solid;
+}
+
+.comment-icon{
+  padding: 1%;
+}
+
+.comment_card_text{
+  color: black;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 1% 0;
+}
+
+.comment_card_body_footer{
+  font-weight: bold;
+  word-spacing: 0.5rem;
+}
+
+.comment_card_body_footer span:hover{
+  color: black;
+  text-decoration: underline;
+}

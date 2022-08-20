@@ -35,12 +35,13 @@
 }
 
 .bloom-icon img{
-  width: 80%;
+  max-height: 100%;
   border-radius: 50%;
 }
 
 .bloom img{
   width: 42%;
+  max-height: 100%;
 }
 
 .search-reddit{
