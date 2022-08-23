@@ -134,7 +134,7 @@ function CardNav(props) {
 
   return (
     <div className="card-nav">
-      <div style={{ width: "4%", marginTop: "0.4%" }}>
+      {(!props.subreddit_page) &&<div style={{ width: "4%", marginTop: "0.4%" }}>
         <img
           src={
             subreddit.icon
@@ -144,9 +144,9 @@ function CardNav(props) {
           alt="subreddit Icon"
           style={{ maxWidth: "90%", maxHeight: "90%", borderRadius: "50%" }}
         />
-      </div>
-      <div style={{ width: "87%" }}>
-        <SubredditTooltip
+      </div>}
+      <div style={{ width: props.subreddit_page? "100%" :"87%" }}>
+        {(!props.subreddit_page) && <SubredditTooltip
           title={
             <div className="subreddit_tooltip">
               <div className="subreddit_tooltip_navbar">
@@ -215,12 +215,12 @@ function CardNav(props) {
             style={{ fontWeight: "bold" }}
             className="underline-link"
           >
-            {props.subreddit}
+            {props.subreddit} ·
           </a>
-        </SubredditTooltip>
+        </SubredditTooltip>}
         <span style={{ color: "gray" }}>
           {" "}
-          · Posted by{" "}
+          Posted by{" "}
           <UserTooltip
             title={
               <div style={{ padding: "3%" }}>

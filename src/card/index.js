@@ -33,6 +33,7 @@ function Card(props) {
           author = {props.author}
           created_at = {props.created_at}
           awardings = {props.awardings}
+          subreddit_page = {props.subreddit_page}
         />
         <div className="title">{props.title}</div>
         <div className="content">
@@ -68,7 +69,6 @@ function Card(props) {
           )}
         </div>
         </a>
-        {console.log(props.comments)}
         <Footer saved={props.saved} comments={props.comments} />
       </div>
     </div>

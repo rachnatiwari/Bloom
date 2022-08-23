@@ -1,0 +1,139 @@
+.subreddit-content {
+  display: flex;
+  margin: 4% 15%;
+}
+
+.user-posts {
+  width: 65%;
+  margin-right: 2%;
+}
+
+.user-sidebar {
+  width: 35%;
+  padding: 0 1%;
+}
+
+.sidebar-box {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  border: 1px lightgray solid;
+  padding-bottom: 3%;
+}
+
+.user-info{
+    padding: 4% 0;
+    background: linear-gradient(to bottom, rgb(48,122,204) 0%, rgb(48,122,204) 100px, #fff 100px, #fff 100%);
+}
+
+.sidebar_snoovatarimg{
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+.sidebar_username{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.sidebar_title{
+    color: grey;
+    font-size: 0.75rem;
+    padding-top: 1%;
+    text-align: center;
+}
+
+.sidebar_user_info{
+    display: flex;
+    margin: 0 4%;
+    font-size: 0.8rem;
+    color: darkgrey;
+}
+
+.sidebar_user_info .left{
+    width: 50%;
+    margin-left: 3%;
+}
+
+.sidebar_user_info .right{
+    width: 50%;
+    margin-left: 3%;
+}
+
+.sidebar_follow_button{
+    width:90% ;
+    margin-left:5%;
+    background-color: rgb(48,122,204);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 2%;
+    border: none;
+    font-size: 1.01rem;
+    margin-top: 4%;
+}
+
+.sidebar_follow_button:hover{
+    opacity: 0.9;
+}
+
+.sidebar_moreoptions{
+    text-align: right;
+    margin-top: 4%;
+    color: rgb(48,122,204);
+    font-weight: bold;
+    padding-right: 10%;
+    font-size: 0.9rem;
+}
+
+.sidebar_moreoptions span:hover{
+    background-color: rgba(128, 128, 128, 0.206);
+    padding: 2% 3%;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.sidebar_toggleoptions{
+    color: rgb(48,122,204);
+    padding: 3% 5%;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.sidebar_toggleoptions span:hover{
+    background-color: rgba(128, 128, 128, 0.206);
+    padding: 2% 3%;
+    border-radius: 20px;
+}
+
+.userpage_trophies{
+    display: flex;
+}
+
+.userpage_trophy_image{
+    width:16%;
+}
+
+.userpage_trophy_details{
+    width: 84%;
+}
+
+.trophy-case{
+    padding: 4%;
+    font-size: 0.9rem;
+}
+
+.userpage_trophies{
+    padding: 2% 0;
+}
+
+.userpage_trophy_name{
+    font-weight: 500;
+}
+
+.userpage_trophy_description{
+    font-size: 0.8rem;
+    color: darkgrey;
+}

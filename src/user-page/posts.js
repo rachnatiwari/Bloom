@@ -13,7 +13,6 @@ function Posts(props) {
   }, []);
 
   async function fetchAPI(initial) {
-    console.log("1");
     fetch(
       "https://www.reddit.com/user/" +
         props.username +
@@ -26,7 +25,6 @@ function Posts(props) {
       })
       .then((data) => {
         let raw_data = data.data.children;
-        console.log("raw data length - " + raw_data.length);
         let arr = posts.length > 0 ? posts : [];
 
         raw_data.map((item) => {
@@ -75,15 +73,12 @@ function Posts(props) {
   }
 
   function fetchMoreData() {
-    console.log("in fetch more data");
     let prev_arr = posts;
     fetchAPI();
     posts.map((item) => {
       prev_arr.push(item);
     });
-    console.log("in fetch more data - " + posts.length);
     setPosts(prev_arr);
-    console.log("after setting new data - " + posts.length);
   }
 
   return (

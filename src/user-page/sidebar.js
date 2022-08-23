@@ -42,7 +42,6 @@ export default function Sidebar(props) {
           created_at: raw_data.created_utc,
           pref_show_snoovatar: raw_data.pref_show_snoovatar,
         };
-        console.log("ser info - " + user_info);
         setUser(user_info);
       });
   }
