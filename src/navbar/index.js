@@ -3,6 +3,7 @@ import SearchBar from "./searchBar";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Link } from "react-router-dom";
+import Login from "../login";
 
 function NavBar() {
   return (
@@ -19,8 +20,7 @@ function NavBar() {
       </div>
 
       <SearchBar />
-      <button className="login">Log In</button>
-      <button className="signup">Sign Up</button>
+      <Login />
       <div className="user">
         <PersonOutlineIcon
           style={{ fontSize: "2.2rem", color: "rgba(121, 119, 119, 0.717)" }}

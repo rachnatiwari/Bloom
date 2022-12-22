@@ -49,26 +49,6 @@
   padding-left: 1%;
 }
 
-.login{
-  margin-left: 12%;
-  width: 7%;
-  border-radius: 25px;
-  border: 2px rgb(48,122,204) solid;
-  background-color: white;
-  font-weight: bold;
-  color: rgb(48,122,204);
-}
-
-.signup{
-  margin-left: 1%;
-  width: 7%;
-  border-radius: 25px;
-  background-color: rgb(48,122,204);
-  border: none;
-  font-weight: bold;
-  color: white;
-}
-
 .user{
   margin-left: 2%;
 }
