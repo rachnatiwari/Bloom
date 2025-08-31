@@ -30,14 +30,14 @@ const Card: React.FC<CardProps> = (props) => {
   <ThumbsDown className="h-5 w-5 text-gray-400 mt-2" />
       </a>
   <div className="p-4 w-full hover:bg-pink-50 transition-colors group">
-        <a href={props.global_link}>
-          <CardNav
-            subreddit={props.subreddit}
-            author={props.author}
-            created_at={props.created_at}
-            awardings={props.awardings}
-            {...(props.subreddit_page !== undefined ? { subreddit_page: props.subreddit_page } : {})}
-          />
+        <CardNav
+          subreddit={props.subreddit}
+          author={props.author}
+          created_at={props.created_at}
+          awardings={props.awardings}
+          {...(props.subreddit_page !== undefined ? { subreddit_page: props.subreddit_page } : {})}
+        />
+        <a href={props.global_link} className="block">
           <div className="mt-4 text-xl font-medium">{props.title}</div>
           <div className="my-4">
             {props.desc}
@@ -75,7 +75,7 @@ const Card: React.FC<CardProps> = (props) => {
             )}
           </div>
         </a>
-  <Footer saved={!!props.saved} comments={props.comments} />
+        <Footer saved={!!props.saved} comments={props.comments} />
       </div>
     </div>
   );

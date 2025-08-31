@@ -89,7 +89,8 @@ function CardNav(props: any) {
   });
 
   async function fetchSubreddit() {
-    redditApi.getSubredditAbout(props.subreddit.replace(/^\//, ""))
+    const sr = String(props.subreddit).replace(/^\//, "").replace(/^r\//i, "");
+    redditApi.getSubredditAbout(sr)
       .then((data) => {
         let raw_data = data.data;
         let subreddit_info = {

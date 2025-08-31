@@ -182,6 +182,14 @@ export const redditApi = {
     return getJSON<any>(`/r/${subreddit}/about.json`);
   },
 
+  getSubredditRules(subreddit: string) {
+    return getJSON<any>(`/r/${subreddit}/about/rules.json`);
+  },
+
+  getSubredditModerators(subreddit: string) {
+    return getJSON<any>(`/r/${subreddit}/about/moderators.json`);
+  },
+
   getUserAbout(username: string) {
     return getJSON<any>(`/user/${username}/about.json`);
   },

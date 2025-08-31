@@ -49,8 +49,9 @@ const CommentCard: React.FC<CommentCardProps> = (props) => {
   }, []);
 
   function fetchSubreddit() {
+    const sr = String(props.subreddit).replace(/^\//, "").replace(/^r\//i, "");
     redditApi
-      .getSubredditAbout(props.subreddit.replace(/^\//, ""))
+      .getSubredditAbout(sr)
       .then((data) => {
         const raw = data.data;
         setSubreddit({

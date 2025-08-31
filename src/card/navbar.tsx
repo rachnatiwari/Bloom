@@ -52,8 +52,11 @@ const CardNav: React.FC<CardNavProps> = (props) => {
   }
 
   function fetchSubreddit() {
+    const sr = props.subreddit
+      .replace(/^\//, "")
+      .replace(/^r\//i, "");
     redditApi
-      .getSubredditAbout(props.subreddit.replace(/^\//, ""))
+      .getSubredditAbout(sr)
       .then((data) => {
         const raw = data.data;
         setSubreddit({
@@ -109,7 +112,7 @@ const CardNav: React.FC<CardNavProps> = (props) => {
   }
 
   return (
-    <div className="flex text-xs items-center w-full mt-1">
+    <div className="flex text-xs items-center w-full mt-1 gap-2 flex-wrap">
       {!props.subreddit_page && (
         <div className="w-5 mr-2">
           <img
@@ -119,7 +122,7 @@ const CardNav: React.FC<CardNavProps> = (props) => {
           />
         </div>
       )}
-      <div className={props.subreddit_page ? "w-full" : "w-11/12"}>
+  <div className={props.subreddit_page ? "flex-1 min-w-0" : "flex-1 min-w-0"}>
         {!props.subreddit_page && (
           <a
             href={`/${props.subreddit}`}
@@ -154,7 +157,7 @@ const CardNav: React.FC<CardNavProps> = (props) => {
       </div>
       <a
         href={`/${props.subreddit}`}
-        className="ml-auto bg-pink-600 text-white rounded-full px-4 py-1 text-xs font-bold hover:bg-pink-700"
+        className="ml-auto shrink-0 bg-pink-600 text-white rounded-full px-4 py-1 text-xs font-bold hover:bg-pink-700"
       >
         Join
       </a>
