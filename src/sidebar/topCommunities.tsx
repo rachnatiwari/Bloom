@@ -62,6 +62,15 @@ function TopCommunities() {
           </div>
         ))}
       </div>
+      <div className="flex justify-center">
+        <a
+          href="/subreddits/popular"
+          rel="noopener noreferrer"
+          className="text-sm text-pink-600 hover:underline font-medium"
+        >
+          See more
+        </a>
+      </div>
     </section>
   );
 }

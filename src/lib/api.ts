@@ -131,14 +131,19 @@ export const redditApi = {
   if (opts?.after) params.set("after", opts.after);
     const sort = opts?.sort ?? "hot";
     const qs = params.toString();
-    const path = `/${sort}.json${qs ? `?${qs}` : ""}`;
+  const path = `/r/popular/${sort}.json${qs ? `?${qs}` : ""}`;
     return getJSON<RedditListing>(path);
   },
 
-  // Popular subreddits
-  getPopularSubreddits(limit = 5) {
+  // Popular subreddits (supports simple pagination via `after`)
+  getPopularSubreddits(limitOrOpts: number | { limit?: number; after?: string | null } = 5) {
     const params = new URLSearchParams();
-    if (limit) params.set("limit", String(limit));
+    if (typeof limitOrOpts === "number") {
+      if (limitOrOpts) params.set("limit", String(limitOrOpts));
+    } else {
+      if (limitOrOpts.limit) params.set("limit", String(limitOrOpts.limit));
+      if (limitOrOpts.after) params.set("after", String(limitOrOpts.after));
+    }
     const qs = params.toString();
     return getJSON<RedditListing>(`/subreddits/popular.json${qs ? `?${qs}` : ""}`);
   },

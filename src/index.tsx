@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserPage from "./user-page/index";
 import SubredditPage from "./subreddit-page/index";
+import PopularSubredditsPage from "./popular-subreddits/index";
 
 const container = document.getElementById("root") as HTMLElement;
 const root = ReactDOM.createRoot(container);
@@ -16,6 +17,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/user/:user_id" element={<UserPage />} />
       <Route path="/r/:subreddit_name" element={<SubredditPage />} />
+  <Route path="/subreddits/popular" element={<PopularSubredditsPage />} />
       <Route
       path="*"
       element={
